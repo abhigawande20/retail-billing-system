@@ -1,0 +1,29 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+
+import Dashboard from "./pages/Dashboard";
+import Products from "./pages/Products";
+import Customers from "./pages/Customers";
+import Billing from "./pages/Billing";
+import Orders from "./pages/Orders";
+
+function App() {
+  return (
+    <BrowserRouter>
+
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/customers" element={<Customers />} />
+        <Route path="/billing" element={<Billing />} />
+        <Route path="/orders" element={<Orders />} />
+      </Routes>
+
+    </BrowserRouter>
+  );
+}
+
+export default App;
